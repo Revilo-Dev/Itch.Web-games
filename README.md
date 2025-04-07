@@ -1,1 +1,1 @@
-A simple HTML/JS/CSS starter template
+A selection of Itch.io Browser games for convenience
