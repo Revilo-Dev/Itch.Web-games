@@ -1,2 +1,1 @@
-# Itch.Web-games
-A curated selection of Itch.io webgames
+A simple HTML/JS/CSS starter template

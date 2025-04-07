@@ -1,0 +1,375 @@
+
+:root {
+    --light: #ffffff;
+    --light-medium: #C5C5C5;
+    --light-medium-hover: #acacac;
+    --light-accent: #FF244A;
+    --light-accent-hover: #d3203e;
+    --light-text: #ffffff;
+    --dark: #0B0B0B;
+    --dark-medium: #161616;
+    --dark-medium-hover: #222222;
+    --dark-accent: #FF244A;
+    --dark-accent-hover: #fa4564;
+    --dark-text: #000000;
+
+}
+
+.spacer {
+    padding: 5%;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+
+body {
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--light);
+    color: var(--dark-text);
+    transition: background-color 0.3s ease;
+    font-family: 'kanit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body.dark-mode {
+    background-color: var(--dark-accent);
+    color: var(--light-text);
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    background-color: var(--light-accent);
+    color: var(--dark-text);
+}
+
+body.dark-mode button { 
+    background-color: var(--dark-accent);
+    color: var(--light-text);
+}
+
+button:hover {
+    background-color: var(--light-accent-hover);
+}
+
+body.dark-mode button:hover {
+    background-color: var(--dark-accent-hover);
+}
+
+#selected-button {
+    background-color: var(--light-accent);
+    color: var(--light-text);
+    transition: background-color 0.3s ease;
+}
+
+#selected-button:hover {
+    background-color: var(--light-accent-hover);
+}
+
+body.dark-mode .navbar #selected-button:hover {
+    background-color: var(--dark-accent-hover);
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+
+
+.header {
+    min-width: 20px;
+    background-color: var(--light-medium);
+    display: flex;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    gap: 5px;
+    z-index: 100;
+}
+
+
+body.dark-mode .header {
+    background-color: var(--dark-medium);
+}
+
+.header img {
+    align-self: center;
+    width: 5vw;
+    height: 5vw;
+    max-width: 200px;
+}
+
+.header h1 {
+    font-size: 2vw;
+    padding: 0;
+    transition: color 0.3s ease;
+
+}
+
+.header .toggle {
+    display: flex;
+    justify-self: right;
+}
+
+
+.navbar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+    justify-content: self;
+    width: 90%;
+    min-width: 100px;
+    min-height: 30px;
+    height: 10%;
+    transition: background-color 0.3s ease;
+    margin-top: 10vw;
+    background-color: var(--light-medium);
+
+}
+
+.navbar button {
+    border-radius: 10px;
+    background-color: var(--light-medium);
+    width: 100%;
+    height: 10%;
+    min-height: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button h3{
+    transition: color 0.3s ease;
+    font-size: 1vw;
+}
+
+.navbar button:hover {
+    background-color: var(--light-medium-hover);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .navbar button {
+    background-color: var(--dark-medium);
+}
+
+body.dark-mode .navbar button:hover {
+    background-color: var(--dark-medium-hover);
+}
+
+body.dark-mode .navbar {
+    background-color: var(--dark-medium);
+}
+
+br {
+    padding: 100px;
+}
+
+.home {
+    margin-top: 10%;
+    display: grid;
+}
+
+.section {
+    text-align: center;
+    padding: 20px;
+}
+
+.section h1 {
+    font-size: 2vw;
+}
+
+h1 {
+    transition: color 0.3s ease;
+}
+
+
+.scrollbox {
+    display: flex; 
+    overflow-x: auto;
+    padding: 20px;
+    padding-top: 10px;
+    gap: 10px; 
+}
+
+.gamebox {
+    width: 30vw; 
+    min-width: 200px; 
+    height: 19vw;
+    min-height: 100px; 
+    padding: 5px;
+    display: flex;
+    transition: background-color 0.3s ease;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: center;
+    background-color: var(--light-medium);
+    box-sizing: border-box;
+    flex-shrink: 0; 
+    position: relative; 
+    border-radius: 5px; 
+    overflow: hidden; 
+}
+
+body.dark-mode .gamebox {
+    background-color: var(--dark-medium);
+}
+
+
+
+.gamebox img {
+    border-radius: 5px;
+    display: block;
+    width: 95%;
+    height: 80%;
+    object-fit: cover; 
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.gamebox button {
+    color: var(--light-text);
+    align-self: center;
+    width: 80%; 
+    transition: background-color 0.3s ease;
+    height: auto;
+    padding: 10px 15px; 
+    margin-bottom: 5px;
+    font-size: 1.1em; 
+    border-radius: 5px; 
+    border: none;
+    cursor: pointer;
+}
+
+.title-overlay {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.info-icon {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    color: var(--light-accent);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--dark-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+
+
+
+
+.footer {
+    background-image: -webkit-linear-gradient(#00000000, var(--light-medium) );
+    text-align: center;
+    position: fixed; 
+    bottom: 0;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    color: var(--dark-text);
+}
+
+.footer p {
+    transition: color 0.3s ease;
+}
+
+
+body.dark-mode .footer {
+    background-image: -webkit-linear-gradient(#00000000, var(--dark-medium) );
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+body ::-webkit-scrollbar-track {
+    background: var(--light-medium);
+    transition: color 0.3s ease;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+    background: var(--dark-medium);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: var(--light-accent);
+    border-radius: 30px;
+}
+
+
+
+/*animation*/
+
+.body {
+    /* Optional: Initial styles for the body container */
+    counter-reset: element-index;
+  }
+  
+  /* Apply animation to direct children of .body (excluding anchors) */
+  .body > *:not(a) {
+    opacity: 0;
+    transform: translateY(40px); /* Initial slide distance */
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation-delay: calc(0.1s * var(--element-index));
+    counter-increment: element-index;
+  }
+  
+  /* Style the anchor tags for layout and apply animation to them */
+  .body > a {
+    display: block; /* Make each link take full width */
+    margin-bottom: 10px; /* Add spacing between links */
+    text-decoration: none; /* Remove default link underline */
+    opacity: 0;
+    transform: translateY(40px); /* Initial slide distance for anchors */
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation-delay: calc(0.1s * var(--element-index));
+    counter-increment: element-index;
+  }
+  
+  /* Target the .link divs within the anchors for specific styling */
+  .body > a > .link {
+    /* Apply the background gradient and other visual styles here */
+    color: white; /* Example text color */
+    padding: 15px;
+    border-radius: 15px;
+  }
+  
+
+
+  @keyframes fadeInSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(180px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* animation done */
+
